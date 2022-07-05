@@ -6,7 +6,7 @@ const getRequest = async (data) => {
     const response = await axios.get(data.url, { params: { ...data.params } });
     return response.data;
   } catch (error) {
-    console.error(error);
+    return error;
   }
 }
 
