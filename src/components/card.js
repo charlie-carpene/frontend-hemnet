@@ -3,7 +3,7 @@ import { Box, Image, Text } from '@chakra-ui/react';
 const Card = ({ data }) => {
     console.log(data.Title);
     return(
-        <Box maxW='10rem' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+        <Box style={style} maxW='10rem' borderWidth='1px' borderRadius='lg' overflow='hidden'>
             <Image boxSize='200px' objectFit='cover' src={data.Poster} alt={data.Title} />
             <Box p='3'>
                 <Text textAlign={[ 'center' ]} maxW='10rem'>
@@ -19,3 +19,6 @@ const Card = ({ data }) => {
 
 export default Card;
 
+const style = {
+    margin: "1.2rem",
+}
